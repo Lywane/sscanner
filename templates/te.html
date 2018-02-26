@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style>
+		img {
+			border: 0;
+		}
+
+		body {
+			background: #f7f7f7;
+			color: #666;
+			font: 12px/150% Arial,Verdana, "microsoft yahei";
+		}
+
+		html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+			margin: 0;
+			padding: 0;
+		}
+
+		article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+
+		audio,canvas,progress,video {
+			display: inline-block;
+			vertical-align: baseline;
+		}
+
+		a {
+			text-decoration: none;
+			color: #08acee;
+		}
+
+		a:active,a:hover {
+			outline: 0;
+		}
+
+		button {
+			outline: 0;
+		}
+
+		mark {
+			color: #000;
+			background: #ff0;
+		}
+
+		small {
+			font-size: 80%;
+		}
+
+		img {
+			border: 0;
+		}
+
+		button,input,optgroup,select,textarea {
+			margin: 0;
+			font: inherit;
+			color: inherit;
+			outline: none;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		i {
+			font-style: normal;
+		}
+
+		a {
+			color: #666;
+		}
+
+		a:hover {
+			color: #eee;
+		}
+
+		em {
+			font-style: normal;
+		}
+
+		h2, h3 {
+			font-family: "microsoft yahei";
+			font-weight: 100;
+		}
+
+
+
+		/* ------------------- */
+		::-moz-placeholder {
+			color: #9fa3a7;
+		}
+
+		::-webkit-input-placeholder {
+			color: #9fa3a7;
+		}
+
+		:-ms-input-placeholder {
+			color: #9fa3a7;
+		}
+
+
+		.pc-kk-form{
+			padding:15px 20px;
+		}
+		.pc-kk-form-list{
+			background:#fff;
+			border:1px solid #e5e5e5;
+			border-radius:5px;
+			height:44px;
+			line-height:44px;
+			margin-bottom:10px;
+		}
+		.pc-kk-form-list input{
+			width:100%;
+			border:none;
+			background:none;
+			color:#9fa3a7;
+			font-size:14px;
+			height: 36px;
+			padding: 4px 10px;
+		}
+		.pc-kk-form-list textarea{
+			background:none;
+			border:none;
+			height:60px;
+			padding:10px;
+			resize:none;
+			width:94%;
+			line-height:22px;
+			color:#9fa3a7;
+			font-size:14px;
+		}
+		.nice-select{
+			position: relative;
+			background: #fff url(images/a2.jpg) no-repeat right center;
+			background-size:18px;
+			width:47%;
+			float:left;
+			border:1px solid #e5e5e5;
+			border-radius:5px;
+			height:44px;
+			line-height:44px;
+		}
+
+		.nice-select ul{
+			width: 100%;
+			display: none;
+			position: absolute;
+			left: -1px;
+			top: 44px;
+			overflow: hidden;
+			background-color: #fff;
+			max-height: 150px;
+			overflow-y: auto;
+			border: 1px solid #b9bcbf;
+			z-index: 9999;
+			border-radius:5px;
+
+		}
+		.nice-select ul li{
+			padding-left:10px;
+		}
+		.nice-select ul li:hover{
+			background:#f8f4f4;
+		}
+		.pc-kk-form-list-clear{
+			background:none;
+			border:none;
+		}
+		.pc-kk-form-btn input{
+			background:#ec5224;
+			color:#fff;
+			border:none;
+			width:100%;
+			height:50px;
+			line-height:50px;
+			font-size:16px;
+			border-radius:50px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="pc-kk-form">
+		<form action="/add_task" method="POST">
+			<div class="pc-kk-form-list">
+				<input type="text" placeholder="Name" name="Name">
+			</div>
+
+            <div class="pc-kk-form-list">
+				<input type="text" placeholder="WebSite" name="WebSite">
+			</div>
+            <!--
+            <div class="pc-kk-form-list pc-kk-form-list-clear">
+				<div class="nice-select" name="nice-select">
+					<input type="text" value="Age" readonly>
+					<ul>
+						<li data-value="4">4</li>
+						<li data-value="5">5</li>
+						<li data-value="6">6</li>
+						<li data-value="7">7</li>
+						<li data-value="8">8</li>
+						<li data-value="9">9</li>
+					</ul>
+
+				</div>
+				<div class="nice-select" name="nice-select" style="float:right">
+					<input type="text" value="Sex" readonly>
+					<ul>
+						<li data-value="male">male</li>
+						<li data-value="female">female</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="pc-kk-form-list">
+				<input type="email" placeholder="E-mail">
+			</div>
+			<div class="pc-kk-form-list">
+				<input type="tel" placeholder="Phone">
+			</div>
+			<div class="pc-kk-form-list">
+				<input type="text" placeholder="Invitation Code">
+			</div>
+			<div class="pc-kk-form-list pc-kk-form-list-clear">
+				<div class="nice-select" name="nice-select">
+					<input type="text" value="Time" readonly>
+					<ul>
+						<li data-value="time1">3:00-7:00</li>
+						<li data-value="time2">7:00-9:00</li>
+						<li data-value="time3">9:00-12:00</li>
+					</ul>
+
+				</div>
+				<div class="nice-select" name="nice-select" style="float:right">
+					<input type="text" value="Area" readonly>
+					<ul>
+						<li data-value="USA">USA</li>
+						<li data-value="Britain">Britain</li>
+						<li data-value="Britain">Germany</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="pc-kk-form-list pc-kk-form-list-clear">
+				<div class="nice-select" name="nice-select" style="width:100%">
+					<input type="text" value="Level" readonly>
+					<ul>
+						<li data-value="Level1">Level1</li>
+						<li data-value="Level2">Level2</li>
+						<li data-value="Level3">Level3</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pc-kk-form-list" style="height:auto">
+				<textarea>Explain</textarea>
+			</div>
+
+             -->
+			<div class="pc-kk-form-btn" >
+                <input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+
+
+
+</body>
+</html>
